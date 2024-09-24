@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theory{
+            text-align: center;
+            text-shadow: 2px 2px aqua;
+        }
+        input{
+            width: 40%;
+            background-color: azure;
+            box-shadow: 2px red;
+            border-radius: 5px;
+        }
+        button{
+         color: white;
+         background-color: black;
+         border-radius: 5px;
+         cursor: pointer;
+         filter: invert(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="theory">
+        <h3>
+            you can type any thing it can speak  without any doubt
+        </h3>
+        <h3>
+            Trust me I never dispoints you.
+        </h3>
+    </div>
+    <div>
+        <input id="input">
+        <button onclick="speak()">speak</button>
+    </div>
+    <script>
+        function speak(){
+            var text = document.getElementById('input').value;
+            var utterence = new SpeechSynthesisUtterance(text)
+            speechSynthesis.speak(utterence)
+        }
+    </script>
+</body>
+</html>
